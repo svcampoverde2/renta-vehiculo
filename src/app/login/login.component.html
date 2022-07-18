@@ -1,0 +1,16 @@
+<div *ngIf="alert" class="alert alert-danger alert-dismissible" role="alert" data-auto-dismiss>
+    <strong>Acceso incorrecto!</strong> Verificar el usuario y/o la contraseña.
+</div>
+<mat-card>    
+    <form [formGroup]="usuarioLogin" (ngSubmit)="onSubmit()">
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Usuario" formControlName="usuario">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button (click)="agregarUsuario()" [disabled] = "!usuarioLogin.valid" >Aceptar</button>
+    </form>
+</mat-card>

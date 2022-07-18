@@ -1,0 +1,57 @@
+
+
+ button{text-align: right;
+    display: inline-block;} 
+ p{text-align: center;
+  color: white;
+  }
+
+  .logo{
+    width: 120px;
+    height: 30px;
+  }
+  #contenedorPrincipal{
+    width: 100%;
+    text-align: center;
+    margin-left:25px;
+    margin-right: 25px;
+  
+}
+
+  .elemento img{
+    width: 270px;
+    height: 200px;
+}
+.elemento{
+    border: none;
+    background-color:lightslategray;
+  /*border-radius:10px;
+    border: 1px solid white;
+    margin-left:5px;
+    margin-top:10px;*/
+    min-width: 100px;
+    padding:10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
+    width: '33%';
+    cursor: pointer;
+    transition: background-color .5s;
+}
+.elemento:hover{
+  transition: background-color .5s;
+  background-color:#1f3e56;
+ /* transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: ease;
+  transition-delay: 0s;*/
+}
+/*necesitamos que el contenedor sea flex*/
+#galeria{
+    display:flex;
+    flex-wrap: wrap; /*wrap multilinea nowrap una solo linea*/
+   /* justify-content: center;/*permite justificar a lo largo de su eje o de su linea*/
+    /*align-items: stretch;/*alinear perpendicular*/
+   /* gap:1px 1px; /*distancia entre filas y columnas*/
+    
+}

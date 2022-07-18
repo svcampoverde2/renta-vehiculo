@@ -1,0 +1,41 @@
+{
+  "clientList": [
+    {
+      "cedula": "0987233232",
+      "nombres": "Gabriela Maribel",
+      "apellidos": "Mendez Torres",
+      "correo": "maria@gmail.com",
+      "direccion": "Machala",
+      "edad": 22,
+      "id": 2
+    },
+    {
+      "cedula": "1242512122",
+      "nombres": "Hector David",
+      "apellidos": "Castro Suarez",
+      "correo": "hector@gmail.com",
+      "direccion": "Manabi",
+      "edad": 23,
+      "id": 3
+    },
+    {
+      "cedula": "1286698783",
+      "nombres": "Jose German",
+      "apellidos": "Crespo Parrales",
+      "correo": "jose@gmail.com",
+      "direccion": "Machala",
+      "edad": 23,
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

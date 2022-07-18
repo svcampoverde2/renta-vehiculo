@@ -1,0 +1,44 @@
+table {
+    width: 100%;
+  }
+  mat-toolbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  #contenedorPrincipal{
+    width: 100%;
+    margin:auto;
+    text-align: center;
+  
+  }
+  #galeria{
+    display:flex;
+    flex-wrap: wrap; /*wrap multilinea nowrap una solo linea*/
+    justify-content: center;/*permite justificar a lo largo de su eje o de su linea*/
+    align-items: stretch;/*alinear perpendicular*/
+    /*height: 350px;*/
+  }
+  .elemento img{
+    width: 460px;
+    height: 320px;
+}
+.elemento{
+    
+    /*background-color: royalblue;
+    border: 1px solid white;*/
+    border-radius:10px;
+    padding:none;
+    min-width: 100px;
+    margin-left:1px;
+    margin-top:15px;
+} 
+.texto{
+  text-align: justify;
+  margin-left:20px;
+  margin-right: 20px;
+}

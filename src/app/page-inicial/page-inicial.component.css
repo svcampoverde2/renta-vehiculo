@@ -1,0 +1,103 @@
+
+  .banner {
+    margin-top: 50px;
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/home-01.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .banner>div {
+    width: 100%;
+    height: 100%;
+   
+  }
+  
+  .banner .pared {
+    position: fixed;
+    left: 0;
+    top: 65px;
+  }
+  
+  @media (max-width:768px) {
+    .banner .pared {
+      display: none;
+    }
+  }
+  
+  .banner .pared img {
+    width: 85px;
+    height: 200px;
+    justify-content: left;
+  }
+  
+  .llamada {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .llamada h1 {
+    font-size: 42px;
+    width: 330px;
+    padding: 20px 22px;
+    margin-left: 10px;
+    color: #fff;
+    background-color: rgba(102, 167, 197, 0.7);
+    text-align: center;
+    border-radius: 30px 15px 30px 15px;
+  }
+  
+  .llamada p {
+    text-align: left;
+    padding-left: 43px;
+    padding-top: 150px;
+    padding-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+  
+  }
+  
+  .llamada a {
+    text-align: center;
+    padding: 10px;
+    margin-left: 80px;
+    margin-top: 28px;
+    width: 100%;
+    max-width: 190px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: #46a2b9;
+    border-radius: 25px;
+    color: #fff;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  
+  .llamada a:hover {
+    background-color: #46a2b9;
+    box-shadow: 0 0 10px #46a2b9, 0 0 20px #46a2b9, 0 0 40px #46a2b9;
+  }
+  
+  @media (max-width:768px) {
+    .contenedor {
+      align-items: center;
+    }
+  
+    .llamada p {
+      padding-left: 0;
+    }
+  
+    .llamada h1 {
+      margin-left: 0;
+    }
+  
+    .llamada a {
+      margin-left: 0;
+    }
+  }
+  

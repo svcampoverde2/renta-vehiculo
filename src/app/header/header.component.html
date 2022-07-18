@@ -1,0 +1,15 @@
+<mat-toolbar color="primary">  
+    <img  class="logo" src="assets/img/logo_white_large.png" alt="" (click)="return()">
+    
+    <span class="example-spacer"></span>
+    <button *ngIf="rol=='admin'" mat-raised-button color="primary" (click)="cliente()" >Clientes</button>
+    
+    <img *ngIf="rol!=null && rol!='admin'" class="perfil" src="assets/img/pago.png" alt="">
+    
+    <button mat-raised-button color="primary">{{rol}}</button>
+    <!--mat-icon *ngIf="rol!=null"></mat-icon-->
+    <img *ngIf="rol!=null" class="perfil" src="assets/img/ing.png" alt="">
+    <button *ngIf="rol!=null" mat-raised-button color="primary" (click)="cerrarSesion()">CerrarSesion</button>
+    <button *ngIf="rol==null" mat-raised-button color="primary" (click)="openDialogSesion()">Iniciar Sesion</button>
+</mat-toolbar>
+  
