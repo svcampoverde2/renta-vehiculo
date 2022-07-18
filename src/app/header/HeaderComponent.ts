@@ -41,6 +41,9 @@ export class HeaderComponent implements OnInit,DoCheck {
     this.router.navigate(['/clientes']);
     
   }
+  catalogo(){
+    this.router.navigate(['catalogo'])
+  }
   return(){
   if(this.rol=='admin'){
     this.router.navigate(['/administrador']);

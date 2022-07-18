@@ -18,6 +18,7 @@ import { AppComponent } from './app.component';
 import { AdministradorComponent } from './usuarios/administrador/administrador.component';
 import { UserClienteComponent } from './usuarios/user-cliente/user-cliente.component';
 import {HttpClientModule} from '@angular/common/http';
+import { CatalogoVehiculoComponent } from './catalogo-vehiculo/catalogo-vehiculo.component';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import {HttpClientModule} from '@angular/common/http';
     AdministradorComponent,
     UserClienteComponent,
     AppComponent,
+    CatalogoVehiculoComponent,
   ],
   imports: [
     BrowserModule, AppRouterModule, BrowserAnimationsModule,
