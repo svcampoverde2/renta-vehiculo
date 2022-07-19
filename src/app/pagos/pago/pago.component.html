@@ -1,0 +1,52 @@
+<div class="mar" style="margin-bottom: 5rem;">
+
+    <br>
+    <mat-form-field appearance="standard" style="margin-left: 2rem;">
+        <mat-label  style="color: rgba(3, 3, 3, 0.966); ">Buscar pagos</mat-label>
+        <input matInput (keyup)="applyFilter($event)" style="background-color: rgba(247, 243, 243, 0.137); color: rgb(10, 10, 10);">
+      </mat-form-field>
+    <br>
+
+    <br>
+
+ <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="cedula">
+        <th mat-header-cell *matHeaderCellDef> CEDULAS </th>
+        <td mat-cell *matCellDef="let element"> {{element.cedula}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombres">
+        <th mat-header-cell *matHeaderCellDef> NOMBRES </th>
+        <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="apellidos">
+        <th mat-header-cell *matHeaderCellDef> APELLIDOS </th>
+        <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="auto">
+        <th mat-header-cell *matHeaderCellDef> AUTO </th>
+        <td mat-cell *matCellDef="let element"> {{element.auto}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="costo">
+        <th mat-header-cell *matHeaderCellDef> COSTO </th>
+        <td mat-cell *matCellDef="let element"> ${{element.costo}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="boton">
+        <th mat-header-cell *matHeaderCellDef>PAGO</th>
+        <td mat-cell *matCellDef="let element" styles="padding-left:2px; width: 10%;"> 
+        <button mat-raised-button color="primary"  
+        (click)="openDialogPagar(element.cedula,element.nombres,element.apellidos,element.auto,element.costo)">Pagar</button> 
+    </td>
+        
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+
+</div>
+

@@ -1,0 +1,41 @@
+<mat-card> 
+
+    <div class="ventana" id="vent">
+        pagados
+    </div>
+
+    <div style="text-align:center;">
+        <mat-card-title>Datos de pago</mat-card-title>
+    </div>   
+    <br>
+    <form [formGroup]="usuarioNuevo">
+
+        <mat-form-field class="campos-field">
+            <label>Nombre</label><br><br>
+            <input matInput [(ngModel)]="data.nombres"  formControlName="nombres" readonly="true">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <label>Apellido</label><br><br>
+            <input matInput [(ngModel)]="data.apellidos"  formControlName="apellidos" readonly="true">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <label>Marca</label><br><br>
+            <input matInput [(ngModel)]="data.auto"  formControlName="auto" readonly="true">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <label>Costo</label><br><br>
+            <input matInput [(ngModel)]="data.costo" formControlName="costo" readonly="true">
+        </mat-form-field>
+
+        <div mat-dialog-action [align]="'end'">
+            <button mat-raised-button color="primary" (click)="pagar()">Pagar</button>
+            
+            <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button> 
+             
+        </div>
+    </form>
+</mat-card>
+

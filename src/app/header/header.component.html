@@ -4,7 +4,7 @@
     <span class="example-spacer"></span>
     <button *ngIf="rol=='admin'" mat-raised-button color="primary" (click)="cliente()" >Clientes</button>
     <button mat-raised-button color="primary" (click)="catalogo()">Catalogo</button>
-    <img *ngIf="rol!=null && rol!='admin'" class="perfil" src="assets/img/pago.png" alt="">
+    <img *ngIf="rol!=null && rol!='admin'" class="perfil" src="assets/img/pago.png" alt="" (click)="pagos()">
     <button mat-raised-button color="primary">{{rol}}</button>
     <!--mat-icon *ngIf="rol!=null"></mat-icon-->
     <img *ngIf="rol!=null" class="perfil" src="assets/img/ing.png" alt="">

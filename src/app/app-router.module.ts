@@ -1,4 +1,4 @@
-import { NgModule } from "@angular/core";
+import { Component, NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { AdministradorComponent } from "./usuarios/administrador/administrador.component";
 
@@ -7,6 +7,7 @@ import { PageInicialComponent } from "./page-inicial/page-inicial.component";
 import { UserClienteComponent } from "./usuarios/user-cliente/user-cliente.component";
 import { CheckLoginGuard } from "./guard/check-login.guard";
 import { CatalogoVehiculoComponent } from "./catalogo-vehiculo/catalogo-vehiculo.component";
+import { PagoComponent } from "./pagos/pago.component";
 
 
 //route
@@ -20,7 +21,8 @@ const routes:Routes=[
     */ {path:'clientes',loadChildren:()=>
     import('./cliente/cliente.module').then((c)=> c.ClienteModule )},
     {path:'sesion', component:LoginComponent},
-    {path:'catalogo', component:CatalogoVehiculoComponent}
+    {path:'catalogo', component:CatalogoVehiculoComponent},
+    {path:'pago', component:PagoComponent}
 ]
 
 @NgModule({

@@ -7,7 +7,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import {MatButtonModule} from '@angular/material/button';
 
 import {MatTableModule} from '@angular/material/table';
-import {MatTabsModule} from '@angular/material/tabs';
+/*import {MatTabsModule} from '@angular/material/tabs';*/
 import {ReactiveFormsModule } from '@angular/forms';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
@@ -19,7 +19,7 @@ import {MatInputModule} from '@angular/material/input';
   declarations: [ClientesComponent, AgregarClienteComponent],
   imports: [
     CommonModule, ClientRoutingModule, MatIconModule, MatInputModule, MatDialogModule, MatButtonModule,
-    MatTableModule, MatTabsModule, ReactiveFormsModule, MatPaginatorModule 
+    MatTableModule, ReactiveFormsModule, MatPaginatorModule 
   ]
 })
 export class ClienteModule { }

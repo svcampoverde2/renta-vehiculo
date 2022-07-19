@@ -13,13 +13,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatTableModule} from '@angular/material/table'
 import { PageInicialComponent } from './page-inicial/page-inicial.component';
-import { AppComponent } from './app.component';
+
 import { AdministradorComponent } from './usuarios/administrador/administrador.component';
 import { UserClienteComponent } from './usuarios/user-cliente/user-cliente.component';
 import {HttpClientModule} from '@angular/common/http';
 import { CatalogoVehiculoComponent } from './catalogo-vehiculo/catalogo-vehiculo.component';
-
+import { PagoComponent } from './pagos/pago.component';
+import { AgregarPagoComponent } from './pagos/agregar-pago/agregar-pago.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +32,14 @@ import { CatalogoVehiculoComponent } from './catalogo-vehiculo/catalogo-vehiculo
     PageInicialComponent,
     AdministradorComponent,
     UserClienteComponent,
-    AppComponent,
     CatalogoVehiculoComponent,
+    PagoComponent,
+    AgregarPagoComponent,
+    AppComponent,
+   
   ],
   imports: [
-    BrowserModule, AppRouterModule, BrowserAnimationsModule,
+    BrowserModule, AppRouterModule, BrowserAnimationsModule, MatTableModule,
     MatButtonModule, ReactiveFormsModule, MatInputModule, MatTabsModule,
     MatToolbarModule, MatIconModule, MatDialogModule, MatCardModule, HttpClientModule
    
