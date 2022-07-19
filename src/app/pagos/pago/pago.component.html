@@ -16,27 +16,27 @@
     </ng-container>
 
     <ng-container matColumnDef="nombres">
-        <th mat-header-cell *matHeaderCellDef> NOMBRES </th>
+        <th mat-header-cell *matHeaderCellDef> Nombres </th>
         <td mat-cell *matCellDef="let element"> {{element.nombres}} </td>
     </ng-container>
 
     <ng-container matColumnDef="apellidos">
-        <th mat-header-cell *matHeaderCellDef> APELLIDOS </th>
+        <th mat-header-cell *matHeaderCellDef> Apellidos </th>
         <td mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
     </ng-container>
 
     <ng-container matColumnDef="auto">
-        <th mat-header-cell *matHeaderCellDef> AUTO </th>
+        <th mat-header-cell *matHeaderCellDef> Auto </th>
         <td mat-cell *matCellDef="let element"> {{element.auto}} </td>
     </ng-container>
 
     <ng-container matColumnDef="costo">
-        <th mat-header-cell *matHeaderCellDef> COSTO </th>
+        <th mat-header-cell *matHeaderCellDef> Costo </th>
         <td mat-cell *matCellDef="let element"> ${{element.costo}} </td>
     </ng-container>
 
     <ng-container matColumnDef="boton">
-        <th mat-header-cell *matHeaderCellDef>PAGO</th>
+        <th mat-header-cell *matHeaderCellDef>Pago</th>
         <td mat-cell *matCellDef="let element" styles="padding-left:2px; width: 10%;"> 
         <button mat-raised-button color="primary"  
         (click)="openDialogPagar(element.cedula,element.nombres,element.apellidos,element.auto,element.costo)">Pagar</button> 

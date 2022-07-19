@@ -11,13 +11,13 @@ export class CheckLoginGuard implements CanActivate, CanLoad {
   
   canActivate():Observable<boolean> | boolean{
   if(!this.log.isLoggedIn){
-    this.router.navigateByUrl('/')
+    this.router.navigateByUrl('/pageInicial')
   }
    return this.log.isLoggedIn;
   }
   canLoad():Observable<boolean> | boolean {
     if(!this.log.isLoggedIn){
-      this.router.navigateByUrl('/')
+      this.router.navigateByUrl('/pageInicial-')
     }
     return this.log.isLoggedIn;
   }

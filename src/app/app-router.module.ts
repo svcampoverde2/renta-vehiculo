@@ -14,11 +14,10 @@ import { PagoComponent } from "./pagos/pago.component";
 const routes:Routes=[
     {path:'',component:PageInicialComponent},
     {path:'pageInicial',component:PageInicialComponent},
-    {path:'administrador', component:AdministradorComponent, /*canActivate:[CheckLoginGuard],*/canLoad:[CheckLoginGuard]},
+    {path:'administrador', component:AdministradorComponent, canLoad:[CheckLoginGuard], canActivate:[CheckLoginGuard],}, 
     {path:'userCliente', component:UserClienteComponent, /*canActivate:[CheckLoginGuard], canLoad:[CheckLoginGuard],*/
      },
-    /* {path:'clientes', component:ClientesComponent},
-    */ {path:'clientes',loadChildren:()=>
+    {path:'clientes',loadChildren:()=>
     import('./cliente/cliente.module').then((c)=> c.ClienteModule )},
     {path:'sesion', component:LoginComponent},
     {path:'catalogo', component:CatalogoVehiculoComponent},
