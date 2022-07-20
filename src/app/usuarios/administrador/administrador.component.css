@@ -1,44 +1,69 @@
-table {
-    width: 100%;
-  }
-  mat-toolbar {
-    position: sticky;
-    position: -webkit-sticky;
-    top: 0;
+
+/*SECTIONS-- BANNER*/
+.banner{
+  background-image: url(src/assets/img/bannerVehiculos.jpg);
+  /*background-repeat: no-repeat;*/
+  background-size: cover;
+  /*position: relative;*/
+  background-position: center;
+  width: 100%;
+  height: 500px;
+}
+.banner_contenido{
+  position: absolute;
+  /*background-color: rgba(0, 0, 0, 0.7);*/
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.banner h1{
+ /* font-family: 'Michroma', sans-serif;*/
+ font-family: 'Michroma', sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  /*-webkit-text-stroke: 2px rgb(0, 0, 0);*/
+}
+.banner p{
+  margin-top: 60px;
+  font-family: 'Londrina Solid', cursive;
+  font-size: 20px;
+  color: #FFFFFF;
+  background-color: #4e94ab;
+  padding: 10px 30px;
+  border-radius: 5px;
+}
+.banner_logos{
+  width: 332px;
+  height: 100px;
+}
+.logoAutos{
+  display: inline-block;
+  background-color: #4e94ab;
+ /* box-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 40px #000000;*/
+}
+.logoAutos img{
+  padding: 10px;
+  width:auto;
+  height: 100px;
 }
 
-.example-spacer {
-    flex: 1 1 auto;
-  }
-  #contenedorPrincipal{
-    width: 100%;
-    margin:auto;
-    text-align: center;
-  
-  }
-  #galeria{
-    display:flex;
-    flex-wrap: wrap; /*wrap multilinea nowrap una solo linea*/
-    justify-content: center;/*permite justificar a lo largo de su eje o de su linea*/
-    align-items: stretch;/*alinear perpendicular*/
-    /*height: 350px;*/
-  }
-  .elemento img{
-    width: 420px;
-    height: 320px;
+.banner_btn{
+  margin-top: 60px;
+  font-size: 20px;
+  color: yellow;
+  background-color: yelow;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 5px;
+  text-decoration: none;
 }
-.elemento{
-    
-    /*background-color: royalblue;
-    border: 1px solid white;*/
-    border-radius:10px;
-    padding:none;
-    min-width: 100px;
-    margin-left:1px;
-    margin-top:15px;
-} 
-.texto{
-  text-align: justify;
-  margin-left:20px;
-  margin-right: 20px;
-}
+
+
+
