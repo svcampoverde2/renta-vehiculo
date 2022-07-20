@@ -3,3 +3,33 @@
     margin-left: 20%;
     margin-right: 20%;
 }
+.campos {
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  cursor: pointer;
+}
+.new{
+    text-align: center;
+}
+.op{
+text-align: center;
+}
+.hed{
+  background-color: #285171;
+  color: #fff;
+}
+.h1{
+  color: #285171;
+  text-align: center;
+}
+.content-foo a:hover {
+    color: white;
+    background-color: rgba(217, 216, 214, 0.5);
+  }
+  .content-foo a {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    /*padding: 0px 30px;*/
+    margin: 0px 30px;
+  }

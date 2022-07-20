@@ -23,6 +23,7 @@ import { CatalogoVehiculoComponent } from './catalogo-vehiculo/catalogo-vehiculo
 import { PagoComponent } from './pagos/pago.component';
 import { AgregarPagoComponent } from './pagos/agregar-pago/agregar-pago.component';
 import { AppComponent } from './app.component';
+import { RecpPasswordComponent } from './recp-password/recp-password.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AppComponent } from './app.component';
     PagoComponent,
     AgregarPagoComponent,
     AppComponent,
+    RecpPasswordComponent,
    
   ],
   imports: [

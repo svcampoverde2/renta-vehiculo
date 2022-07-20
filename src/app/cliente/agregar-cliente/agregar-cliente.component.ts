@@ -1,7 +1,10 @@
-import { Component, Inject, OnInit } from '@angular/core';
+import { Component, Inject, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/cliente/api.service';
-import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
+import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import {LoginComponent} from '../../login/login.component';
+import { ClienteService } from 'src/app/usuarios/cliente.service';
 
 @Component({
   selector: 'app-agregar-cliente',
@@ -9,12 +12,12 @@ import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog'
   styleUrls: ['./agregar-cliente.component.css']
 })
 export class AgregarClienteComponent implements OnInit {
-
+  rol!:any;
   usuarioNuevo !: FormGroup
   actionBtn: string ="Guardar"
   constructor(private formBuilder: FormBuilder, private api:ApiService, 
-    @Inject(MAT_DIALOG_DATA) public editData:any,
-    private dialogRef: MatDialogRef<AgregarClienteComponent>) { }
+    @Inject(MAT_DIALOG_DATA) public editData:any, private user:ClienteService,
+    private dialogRef: MatDialogRef<AgregarClienteComponent>, private router:Router) { }
 
   ngOnInit(): void {
     this.usuarioNuevo = this.formBuilder.group({
@@ -34,6 +37,7 @@ export class AgregarClienteComponent implements OnInit {
       this.usuarioNuevo.controls['direccion'].setValue(this.editData.direccion);
       this.usuarioNuevo.controls['edad'].setValue(this.editData.edad);
     }
+    this.user.userN.subscribe((dato) => { this.rol = '' + dato; });
   }
  agregar(){
  if(!this.editData){
@@ -42,9 +46,14 @@ export class AgregarClienteComponent implements OnInit {
     .subscribe({
       next:(res)=>{
         alert("Registro guardado con exito");
-        this.usuarioNuevo.reset();
-        this.dialogRef.close('Guardar');
-        
+        if(this.get_dato('Admin')==true){
+          this.router.navigate(['clientes']);
+      }
+      if(!this.get_dato('Admin')){       
+        this.router.navigate(['userCliente']);
+      }
+      this.usuarioNuevo.reset();
+      this.dialogRef.close('Guardar');
       },
       error:(res)=>{("Error, el registro no se guardado")}
     })
@@ -66,5 +75,12 @@ export class AgregarClienteComponent implements OnInit {
      }
    })
  }
+ get_dato(key: string) {
+  try {
+    return localStorage.getItem(key);
+  } catch (e) {
+    return e;
+  }
+}
 
 }

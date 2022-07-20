@@ -1,5 +1,5 @@
 
-<h1 mat-dialog-title>Registro</h1>
+<h1 class="h1" mat-dialog-title>Registro</h1>
 <div mat-dialog-content>
     <form [formGroup]="usuarioNuevo">
         <mat-form-field class="campos-field">
@@ -28,7 +28,7 @@
         </mat-form-field>
     </form>
 </div>
-<div mat-dialog-action [align]="'end'">
-    <button mat-raised-button color="accent" (click)="agregar()">{{actionBtn}}</button> 
+<div mat-dialog-action [align]="'end'" class="op">
+    <button mat-raised-button class="hed" (click)="agregar()">{{actionBtn}}</button> 
     <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
 </div>

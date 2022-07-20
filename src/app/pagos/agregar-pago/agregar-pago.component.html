@@ -4,7 +4,7 @@
         pagados
     </div>
 
-    <div style="text-align:center;">
+    <div class="h1">
         <mat-card-title>Datos de pago</mat-card-title>
     </div>   
     <br>
@@ -30,8 +30,8 @@
             <input matInput [(ngModel)]="data.costo" formControlName="costo" readonly="true">
         </mat-form-field>
 
-        <div mat-dialog-action [align]="'end'">
-            <button mat-raised-button color="primary" (click)="pagar()">Pagar</button>
+        <div mat-dialog-action [align]="'end'" class="op">
+            <button mat-raised-button class="hed" (click)="pagar()">Pagar</button>
             
             <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button> 
              

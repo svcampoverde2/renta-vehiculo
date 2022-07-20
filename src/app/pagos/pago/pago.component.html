@@ -36,9 +36,9 @@
     </ng-container>
 
     <ng-container matColumnDef="boton">
-        <th mat-header-cell *matHeaderCellDef>Pago</th>
+        <th mat-header-cell *matHeaderCellDef>Accion</th>
         <td mat-cell *matCellDef="let element" styles="padding-left:2px; width: 10%;"> 
-        <button mat-raised-button color="primary"  
+        <button mat-raised-button class="hed"
         (click)="openDialogPagar(element.cedula,element.nombres,element.apellidos,element.auto,element.costo)">Pagar</button> 
     </td>
         
