@@ -97,8 +97,8 @@ body {
 }
 
 .llamada a:hover {
-  background-color: #46a2b9;
-  box-shadow: 0 0 10px #46a2b9, 0 0 20px #46a2b9, 0 0 40px #46a2b9;
+  background-color: #285171;
+  box-shadow: 0 0 10px #285171, 0 0 20px #285171, 0 0 40px #285171;
 }
 
 @media (max-width:768px) {
@@ -119,10 +119,10 @@ body {
   }
 }
 
-.llamada a:hover {
+/*.llamada a:hover {
   background-color: #fe908b;
   box-shadow: 0 0 10px #fe908b, 0 0 20px #fe908b, 0 0 40px #fe908b;
-}
+}*/
 
 @media (max-width:768px) {
   .contenedor {

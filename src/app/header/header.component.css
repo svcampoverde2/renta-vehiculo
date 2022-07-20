@@ -1,9 +1,18 @@
-mat-toolbar {
+/*mat-toolbar {
     position: sticky;
     position: -webkit-sticky;
     top: 0;
+}*/
+.toolbar{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #285171;
 }
-
+.hed{
+  background-color: #285171;
+  color: #fff;
+}
 .example-spacer {
     flex: 1 1 auto;
   }

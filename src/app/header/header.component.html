@@ -1,15 +1,14 @@
-<mat-toolbar color="primary">  
+<mat-toolbar class="toolbar">  
     <img  class="logo" src="assets/img/logo_white_large.png" alt="" (click)="return()">
     
     <span class="example-spacer"></span>
-    <button *ngIf="rol=='admin'" mat-raised-button color="primary" (click)="cliente()" >Clientes</button>
-    <button *ngIf="rol!=null" mat-raised-button color="primary" (click)="catalogo()">Catalogo</button>
-    <button  *ngIf="rol!=null && rol!='admin'" mat-raised-button color="primary"  (click)="pagos()" >Pagos</button>
+    <button *ngIf="rol=='admin'" mat-raised-button class="hed" (click)="cliente()" >Clientes</button>
+    <button *ngIf="rol=='admin'" mat-raised-button class="hed" (click)="catalogo()">Catalogo</button>
+    <button  *ngIf="rol!=null && rol!='admin'" mat-raised-button class="hed" (click)="pagos()" >Pagos</button>
     
-    <button mat-raised-button color="primary">{{rol}}</button>
-    <!--mat-icon *ngIf="rol!=null"></mat-icon-->
+    <button mat-raised-button class="hed">{{rol}}</button>
     <img *ngIf="rol!=null" class="perfil" src="assets/img/ing.png" alt="">
-    <button *ngIf="rol!=null" mat-raised-button color="primary" (click)="cerrarSesion()">CerrarSesion</button>
-    <button *ngIf="rol==null" mat-raised-button color="primary" (click)="openDialogSesion()">Iniciar Sesion</button>
+    <button  *ngIf="rol!=null" mat-raised-button class="hed" (click)="cerrarSesion()">CerrarSesion</button>
+    <button *ngIf="rol==null" mat-raised-button class="hed"(click)="openDialogSesion()">Iniciar Sesion</button>
 </mat-toolbar>
   
