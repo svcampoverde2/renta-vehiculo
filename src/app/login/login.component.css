@@ -30,6 +30,14 @@ text-align: center;
   .content-foo a {
     color: rgb(255, 255, 255);
     text-align: center;
-    /*padding: 0px 30px;*/
     margin: 0px 30px;
+  }
+
+  @media(max-width:300px){
+   .campos{
+     width: auto;
+   }
+   .campos-field{
+     width: auto;
+   }
   }
