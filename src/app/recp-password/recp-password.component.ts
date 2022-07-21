@@ -12,10 +12,10 @@ export class RecpPasswordComponent implements OnInit {
   constructor(private dialogRef:MatDialog) { }
   Recuperar = new FormGroup({
     correo: new FormControl('', Validators.required)
-  })
+  });
   enviar(){
     if(!this.dialogRef){
-   correo: this.Recuperar.value.correo;
+    this.Recuperar.value.correo;
    }
    else{
     this.dialogRef.closeAll();
