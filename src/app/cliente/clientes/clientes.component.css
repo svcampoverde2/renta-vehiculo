@@ -1,14 +1,15 @@
 .container{
+  width: 80%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
 table {
-  width: 100%;
+  width: 10%;
 }
 mat-form-field{
-  font-size: 14px;
-  width: 100%;
+  font-size: 4%;
+  width: 10%;
 }
 .hed{
   background-color: #285171;
@@ -16,4 +17,21 @@ mat-form-field{
 }
 .he{
   color:#285171;
+}
+ng-container{
+  width: 20%;
+}
+
+@media screen and (max-with:300px) {
+  .container{
+    width: 100%;
+  }
+  table{
+    width: 100%;
+  }
+
+  mat-form-field{
+    font-size: 4%;
+    width: 100%;
+  }
 }

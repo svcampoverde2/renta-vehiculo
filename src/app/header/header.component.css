@@ -3,11 +3,18 @@
     position: -webkit-sticky;
     top: 0;
 }*/
+/*.toolbar .logo .perfil{
+  width: 100%;
+  height: auto;
+}*/
 .toolbar{
+  width: 100%;
+  max-width: 1200px;
   position: sticky;
   position: -webkit-sticky;
   top: 0;
   background-color: #285171;
+  
 }
 .hed{
   background-color: #285171;
@@ -18,21 +25,27 @@
   }
   .logo{
     width: 120px;
-    height: 30px;
+    height: 25px;
+    /*120, 30px 12%, 60%*/
     cursor: pointer;
   }
   .perfil{
-      width: 40px;
-      height: 40px;
-      margin-left:5px;
-      margin-right:5px;
+      width: 4%;
+      height: 50%;
+      margin-left:0.5%;
+      margin-right:0.5%;
       cursor: pointer;
   }
   mat-raised-button{
     margin: 0%;
   }
-  @media(max-width:500px) {
+  
+  @media screen and (max-with:350px) {
     .example-spacer{
-      width:auto;
+      width: 100%;
+    }
+    .toolbar{
+      width: 100%;
+      height: auto;
     }
   }
