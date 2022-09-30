@@ -1,0 +1,29 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+
+<div class="container">
+<h1 class="h1" mat-dialog-title>Registro de ciudad</h1>
+<mat-card>
+<div mat-dialog-content>
+  <form [formGroup]="provinciaN" (ngSubmit)=" guardarProvincia()">
+      <mat-form-field class="campos-field">
+          <mat-label>Ciudad</mat-label>
+          <input type="text" matInput placeholder="ciudad" formControlName="nombre">
+      </mat-form-field>
+      <mat-form-field class="campos-field">
+          <mat-label>Estado</mat-label>
+          <input type="text" matInput placeholder="estado" formControlName="estado">
+      </mat-form-field>
+
+<div mat-dialog-action [align]="'end'" class="op">
+  <button [disabled]="this.provinciaN.invalid" type="submit"  mat-raised-button class="hed" >Agregar</button>
+  <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+</div>
+
+</form>
+</div>
+</mat-card>
+</div>

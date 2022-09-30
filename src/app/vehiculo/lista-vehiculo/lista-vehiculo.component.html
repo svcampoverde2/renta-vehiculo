@@ -1,0 +1,92 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+  <div class="container">
+    <br>
+    <!--button mat-raised-button class="hed" (click)="openDialogAgregar()"> Agregar</button-->
+    <br><br>
+     
+   
+        <div style="margin-top: 10px;">
+  
+          <mat-form-field appearance="standard">
+              <mat-label id="ip">Filter</mat-label>
+              <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+            </mat-form-field>
+  
+            <!--div mat-tab-nav-bar, class="table-responsive{-sm|-md|-lg|-xl}", 
+              appa style="margin-left: 2rem;, class="mar""., margin-bottom: 5rem;-->
+            <div class="table-responsive-sm">
+            <div  class="mat-elevation-z8">
+              
+                <table mat-table [dataSource]="dataSource" matSort>
+            
+                <!-- ID Column -->
+                <ng-container matColumnDef="marca">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Marca </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.marca}} </td>
+                </ng-container>
+            
+                <!-- Progress Column -->
+                <ng-container matColumnDef="plazas">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Asientos </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.plazas}} </td>
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="cambios">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Cambios </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.cambios}} </td>
+                </ng-container>
+            
+                <!-- Fruit Column -->
+                <ng-container matColumnDef="kilometraje">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Kilometraje </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.kilometraje}} </td>
+                </ng-container>
+  
+                <ng-container matColumnDef="tipo">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Tipo </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.tipo}} </td>
+                </ng-container>
+  
+                <ng-container matColumnDef="costo">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Costo </th>
+                  <td class="td" mat-cell *matCellDef="let row"> ${{row.costo}} </td>
+                </ng-container>
+  
+                <ng-container matColumnDef="estado">
+                  <th class="th" mat-header-cell *matHeaderCellDef mat-sort-header> Estado </th>
+                  <td class="td" mat-cell *matCellDef="let row"> {{row.estado}} </td>
+                  <!--td class="td" mat-cell *matCellDef="let row">
+                      <!-button (click)="editarClient(row)" mat-icon-button class="he">
+                          <mat-icon>edit</mat-icon>
+                      </button->
+                  
+                      <!-button (click)="eliminarCliente(row.id)" mat-icon-button color="warn">
+                          <mat-icon>delete</mat-icon>
+                      </button->
+                  </td-->
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            
+                <!-- Row shown when there is no matching data. -->
+                <tr class="mat-row" *matNoDataRow>
+                <!--td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td-->
+                </tr>
+              </table>
+            </div>
+           </div>
+            
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+          
+        </div>
+        <div>
+          <br>
+          <br>
+        </div>
+    </div>

@@ -1,0 +1,68 @@
+
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  overflow: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+.toolbar{
+  width: 100%;
+  max-width: 1800px;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  background-color: #285171;
+  
+}
+.hed{
+  background-color: #285171;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color .5s;
+}
+.hed:hover{
+  transition: background-color .5s;
+  transition: all 0.25s;
+  background-color:#1f3e56;
+  overflow: hidden
+}
+
+mat-button{
+  background-color: cadetblue;
+
+}
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .logo{
+    width: 120px;
+    height: 30px;
+    /*120, 30px 12%, 60%*/
+    cursor: pointer;
+  }
+  .perfil{
+      width: 35px;
+      height: 35px;
+      margin-left: 5px;
+      margin-right:5px;
+      cursor: pointer;
+  }
+  mat-raised-button{
+    margin: 0%;
+  }
+  
+  @media(max-with:350px) {
+    .example-spacer{
+      width: 100%;
+    }
+    .toolbar{
+      width: 100%;
+      height: auto;
+    }
+    .logo{
+      width: 100%;
+    }
+  }

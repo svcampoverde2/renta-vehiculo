@@ -1,0 +1,61 @@
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+<div class="container">
+    
+<div class="mar" style="margin-bottom: 5rem;">
+
+    <br>
+    <mat-form-field appearance="standard" style="margin-left: 2rem;">
+        <mat-label  style="color: rgba(3, 3, 3, 0.966); ">Buscar pagos</mat-label>
+        <input matInput (keyup)="applyFilter($event)" style="background-color: rgba(247, 243, 243, 0.137); color: rgb(10, 10, 10);">
+      </mat-form-field>
+    <br>
+
+    <br>
+<div class="table-responsive-lg">
+    <!--div mat-tab-nav-bar></div-->
+ <table class="table" mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="cedula">
+        <th class="th" mat-header-cell *matHeaderCellDef> Cedula </th>
+        <td class="td"mat-cell *matCellDef="let element"> {{element.cedula}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombres">
+        <th class="th" mat-header-cell *matHeaderCellDef> Nombres </th>
+        <td class="td" mat-cell *matCellDef="let element"> {{element.nombres}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="apellidos">
+        <th class="th" mat-header-cell *matHeaderCellDef> Apellidos </th>
+        <td class="td" mat-cell *matCellDef="let element"> {{element.apellidos}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="auto">
+        <th class="th" mat-header-cell *matHeaderCellDef> Auto </th>
+        <td class="td" mat-cell *matCellDef="let element"> {{element.auto}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dias">
+        <th class="th" mat-header-cell *matHeaderCellDef> Dias </th>
+        <td class="td" mat-cell *matCellDef="let element"> {{element.dias}} </td>
+    </ng-container>
+
+
+    <ng-container matColumnDef="costo">
+        <th class="th" mat-header-cell *matHeaderCellDef> Costo </th>
+        <td class="td" mat-cell *matCellDef="let element"> ${{element.costo}} </td>
+    </ng-container>
+    <ng-container matColumnDef="estado">
+        <th class="th" mat-header-cell *matHeaderCellDef> Estado </th>
+        <td class="td" mat-cell *matCellDef="let element"> {{element.estado}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+ </table>
+</div>
+</div>
+
+</div>

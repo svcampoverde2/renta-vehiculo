@@ -1,0 +1,59 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+<div class="container">
+<mat-card> 
+    <!--div class="ventana" id="vent">
+        pagados
+    </div-->
+
+    <div class="h1">
+        <mat-card-title>Realizar renta</mat-card-title>
+    </div>   
+    <br>
+    <div mat-dialog-content>    
+    <form [formGroup]="usuarioNuevo">
+        <mat-form-field class="campos-field">
+            <mat-label>Cedula</mat-label>
+            <input type="text" matInput placeholder="cedula" formControlName="cedula">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <mat-label>Nombre</mat-label>
+            <input type="text" matInput placeholder="nombres" formControlName="nombres">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <mat-label>Apellido</mat-label>
+            <!--input matInput [(ngModel)]="data.apellidos"  formControlName="apellidos" readonly="true"-->
+            <input type="text" matInput placeholder="apellidos" formControlName="apellidos">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <mat-label>Marca</mat-label>
+            <input type="text" matInput placeholder="marca"  formControlName="marca">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <mat-label>Cantidad dias</mat-label>
+            <input type="number" matInput placeholder="cantidad dias" formControlName="cantidad" >
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <mat-label>Costo</mat-label>
+            <input type="text" matInput placeholder="costo" formControlName="costo">
+        </mat-form-field>
+
+        <div mat-dialog-action [align]="'end'" class="op">
+            <button mat-raised-button class="hed" (click)="Reservar()">Reservar</button>
+            
+            <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button> 
+             
+        </div>
+    </form>
+    </div>
+</mat-card>
+
+</div>

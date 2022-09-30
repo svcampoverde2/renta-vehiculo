@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+
+<div class="container">
+<h1 class="h1" mat-dialog-title>Registro</h1>
+<mat-card>
+<div mat-dialog-content>
+    <form [formGroup]="usuarioNuevo" autocomplete="off">
+        <mat-form-field class="campos-field">
+            <mat-label>Cedula</mat-label>
+            <input type="text" matInput placeholder="cedula" formControlName="cedula">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Nombres</mat-label>
+            <input type="text" matInput placeholder="nombres" formControlName="nombres">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Apellidos</mat-label>
+            <input type="text" matInput placeholder="apellidos" formControlName="apellidos">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Correo</mat-label>
+            <input type="text" matInput placeholder="correo"  formControlName="correo" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Password</mat-label>
+            <input type="password" matInput placeholder="password"  formControlName="password" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Direccion</mat-label>
+            <input type="text" matInput placeholder="direccion" formControlName="direccion">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Ciudad</mat-label>
+            <input type="text" matInput placeholder="ciudad" formControlName="ciudad">
+        </mat-form-field>
+        <mat-form-field class="campos-field">
+            <mat-label>Edad</mat-label>
+            <input type="number" matInput placeholder="edad" formControlName="edad">
+        </mat-form-field>
+
+<div mat-dialog-action [align]="'end'" class="op">
+    <button mat-raised-button class="hed" (click)="agregar()">{{actionBtn}}</button>
+    <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+</div>
+
+</form>
+</div>
+</mat-card>
+</div>
+<!--button mat-raised-button class="hed" (click)="agregar()">{{actionBtn}}</button-->

@@ -1,0 +1,70 @@
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  overflow: hidden;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: 'Open Sans', sans-serif;
+
+}
+table {
+    width: 90%;
+    /*margin-left: 2rem;*/
+  }
+
+  .acc{
+    background-color: #285171;
+    color: #fff;
+  }
+  .hed{
+    background-color: #285171;
+    color: #fff;
+  }
+ mat-form-field{
+    width: 200px;
+    cursor: pointer;
+  }
+  input{
+    width: 200px;
+  }
+  .th{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+  }
+  .td{
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+  }
+  /*@media screen and(max-width:350px) {
+    table{
+      width: 90%;
+    }
+    button{
+     width: 60%;
+    }
+    input{
+      width: 100%;
+    }
+    ng-container{
+      width: 100%;
+
+    }
+  }
+  @media screen and(max-width:790px) {
+   table{
+     width: 90%;
+   }
+    button{
+     width: 60%;
+    }
+    input{
+      width: 100%;
+    }
+    ng-container{
+      width: 100%;
+
+    }
+  }*/

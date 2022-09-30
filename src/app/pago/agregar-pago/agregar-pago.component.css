@@ -1,0 +1,58 @@
+.container {
+    width: 100%;
+    max-width: 1800px;
+    margin: auto;
+    overflow: hidden;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-family: 'Open Sans', sans-serif;
+   
+  }
+.campos-field {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.ventana{
+    background:rgba(0,0,102,1);
+    width:30%;
+    color:rgba(225,225,255,1);
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:18px;
+    text-align:center;
+    padding:33px;
+    min-height:250px;
+    border-radius:22px;
+    position:absolute;
+    left:34%;
+    top:25%;
+    display:none;
+}
+.op{
+    text-align: center;
+    }
+.hed{
+  background-color: #285171;
+  color: #fff;
+  width: 90px;
+}
+.h1{
+    color: #285171;
+    text-align: center;
+  }
+
+  @media(max-width:350px){
+    
+    .campos-field{
+      width: 80%;
+    }
+    button{
+      width: 60%;
+      margin-top: 4px;
+    }
+    mat-label{
+     width: 60%;
+    }
+   
+   }

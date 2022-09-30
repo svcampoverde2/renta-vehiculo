@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+
+<div class="container">
+<div *ngIf="alert" class="alert alert-danger alert-dismissible" role="alert" data-auto-dismiss>
+    <strong>Acceso incorrecto!</strong> Verificar el usuario y/o la contraseña.
+</div>
+<h1 class="h1" mat-dialog-title>Iniciar sesión</h1>
+<mat-card>
+    <div mat-dialog-content>  
+    <form [formGroup]="usuarioLogin" (ngSubmit)="onSubmit()" >
+        <mat-form-field class="campos-field">
+            <input matInput placeholder="Usuario" formControlName="correo">
+        </mat-form-field>
+
+        <mat-form-field class="campos-field">
+            <input type="password" matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <div><br></div>
+        <!--button mat-raised-button color="accent" (click)="agregarUsuario()" [disabled] = "!usuarioLogin.valid" >Aceptar</button-->
+        <div mat-dialog-action [align]="'end'" class="op">
+            <button mat-raised-button class="hed" (click)="agregarUsuario()" >Aceptar</button> 
+            <button style="margin-left: 8px;" mat-raised-button color="warn" mat-dialog-close>Cancelar</button>
+        </div>
+        <mat-form-field class="campos">
+            <mat-label>Olvidaste la contraseña?</mat-label>
+            <input  matInput (click)="recuperar()" >
+        </mat-form-field>
+            
+    
+<br>
+    <div class="new">
+<button mat-raised-button class="hed" (click)="openDialogAgregar()" (click)="agregarUsuario()">Crear cuenta</button>
+
+</div>
+
+
+
+</form>
+</div>  
+</mat-card>
+</div>

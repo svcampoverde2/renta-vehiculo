@@ -1,0 +1,75 @@
+.footer {
+    background-color: #285171;
+    color: #fff;
+  }
+  .footer>.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .footer>.contenedor .pie {
+    padding: 20px;
+    width: 25%;
+    flex-direction: row;
+    gap: 2%;
+    padding-right: 4%;
+  }
+  @media (max-width:350px) {
+    .footer>.contenedor .pie {
+      padding: 0px;
+      width: 90%;
+    }
+    .footer>.contenedor {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    .footer>.contenedor .pie h4 {
+      text-align: center;
+    }
+  
+    .footer>.contenedor .pie p {
+      text-align: center;
+    }
+  }
+  @media (max-width:790px) {
+    .footer>.contenedor .pie {
+      padding: 0px;
+      width: 90%;
+    }
+    .footer>.contenedor {
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+    }
+    .footer>.contenedor .pie h4 {
+      text-align: center;
+    }
+  
+    .footer>.contenedor .pie p {
+      text-align: center;
+    }
+  }
+
+  
+  .footer .pie p {
+    font-size: 14px;
+    text-align: center;
+   
+  }
+  
+  .footer .pie h4 {
+    padding-bottom: 5px;
+    text-align: center;
+  }
+  
+  .footer .derechos {
+    text-align: center;
+    background-color: #1f3e56;
+    font-size: 12px;
+    padding: 3px 0;
+  }
+  

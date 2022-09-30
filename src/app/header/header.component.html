@@ -1,0 +1,28 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  </head>
+
+<mat-toolbar class="toolbar"> 
+ 
+    <img  class="logo" src="assets/img/logo_white_large.png" alt="" (click)="return()">
+    
+    <span class="example-spacer"></span>
+    <button mat-raised-button class="hed">{{rol}}</button>
+    <img *ngIf="rol!=null" class="perfil" src="assets/img/ing.png" alt="">
+    <button mat-button *ngIf="rol!=null" class="hed" [matMenuTriggerFor]="menu"> Menú </button> 
+    <mat-menu #menu = "matMenu" > 
+      <button *ngIf="rol=='admin'"  class="hed" (click)="cliente()" mat-menu-item >Clientes</button>
+      <button mat-menu-item *ngIf="rol=='admin'"  class="hed" (click)="catalogo()">Catalogo</button>
+      <button mat-menu-item *ngIf="rol=='admin'"  class="hed" (click)="listaVehiculo()">Listarvehiculo</button>
+      <button mat-menu-item  *ngIf="rol!=null && rol!='admin'"  class="hed" (click)="pagos()" >Pagos</button>
+      <button mat-menu-item  *ngIf="rol!=null && rol!='admin'"  class="hed" (click)="historial()" >Historial</button>
+      <button mat-menu-item *ngIf="rol!=null"  class="hed" (click)="cerrarSesion()">CerrarSesion</button>
+    </mat-menu>
+
+    
+    <button *ngIf="rol==null" mat-raised-button class="hed"(click)="openDialogSesion()">Iniciar Sesion</button>
+  
+  </mat-toolbar>
+  

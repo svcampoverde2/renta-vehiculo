@@ -1,0 +1,244 @@
+.container {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  overflow: hidden;
+  padding: 60px, 0;
+  padding-left: 0px;
+  padding-right: 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+.contenedor .banner {
+  width: 100%;
+  height: 500px;
+  margin-top: 0px;
+  background-size: cover;
+  justify-content: center;
+  background-position: center;
+  
+}
+.banner style{
+  width: 100%;
+  height: 100%;
+}
+.llamada {
+  display: flex;
+  flex-direction: column;
+}
+
+.llamada h1 {
+  font-size: 42px;
+  width: 300px;
+  padding: 20px 22px;
+  background-color: rgba(102, 167, 197, 0.7);
+  margin-left: 10px;
+  color: #fff;
+  text-align: center;
+  border-radius: 30px 15px 30px 15px;
+}
+
+.llamada p {
+ padding-top: 150px;
+  padding-bottom: 20px;
+   font-weight: bold;
+   padding-left: 43px;
+  font-size: 22px;
+  color: white;
+
+}
+.llamada a {
+  text-align: center;
+  padding: 10px;
+  margin-left: 80px;
+  /*margin-top: 28px;*/
+  width: 100%;
+  max-width: 190px;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #46a2b9;
+  border-radius: 25px;
+  color: #fff;
+  font-weight: bolder;
+ /* letter-spacing: 2px;*/
+  overflow: hidden;
+  transition: 0.2s;
+}
+
+.llamada a:hover {
+  background-color: #285171;
+  box-shadow: 0 0 10px #285171, 0 0 20px #285171, 0 0 40px #285171;
+}
+p{text-align: justify;}
+
+
+.contenedor .banner2{
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  margin-top: 5px;
+  
+}
+.banner2 img{
+  width: 100%;
+  height: 100%;
+}
+
+@media(max-width:360px) {
+  .contenedor .banner{
+    width: 100%;
+    height: 250px;
+  }
+  .llamada p{
+    padding-top: 15px;
+
+  }
+  .llamada a{
+    padding-top: 0.10% 0;
+    padding-bottom: 1rem;
+    
+  }
+  .llamada h1{
+    padding-top: 3px;
+  }
+  
+  .container{
+    width: 100%;
+  }
+  .img-fluid{
+    max-width: 80%; 
+    height: auto; 
+  }
+  .info p{
+    width: 100%;
+  }
+  .nosotros .info{
+    width: 100%;
+  }
+}
+@media(max-width:780px) {
+  .contenedor .banner{
+    width: 100%;
+  }
+  .contenedor .banner2{
+  width: 100%;
+  }
+  .img-fluid{
+    max-width: 60%; 
+    height: auto; 
+  }
+  .info p{
+    width: 100%;
+  }
+  nosotros .info{
+    width: 90%;
+  }
+}
+
+/* TODO: Nosotros */
+.nosotros .porque {
+  background-color: rgba(102, 167, 197, 0.9);
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.servicio hr {
+  width: 100%;
+  margin: auto;
+}
+
+.nosotros>.contenedor {
+  
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.nosotros .info {
+  width: 100%;
+  max-width: 270px;
+  padding-top: 40px 0px;
+  margin-top: 25px;
+  text-align: center;
+}
+
+.nosotros .info img {
+  margin: auto;
+  width: 100%;
+  height: 190px;
+}
+
+.nosotros .info:nth-child(2) img {
+  width: 80%;
+}
+
+.nosotros .info:nth-child(2) img {
+  width: 110%;
+}
+
+.nosotros .info:nth-child(3) img {
+  width: 90%;
+}
+
+
+
+.info p {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4f6f8e;
+}
+
+/* TODO: servicios */
+.servicio>.contenedor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 40px 0;
+  justify-content: center;
+}
+
+.servicio .foto-flores {
+  width: 100%;
+  max-width: 585px;
+  text-align: center;
+}
+
+.servicio .foto-flores img {
+  width: 75%;
+  height: 280px;
+  border-radius: 10px;
+}
+
+.servicio .dato-servicio {
+  width: 100%;
+  max-width: 585px;
+  justify-content: center;
+  text-align: center;
+}
+
+.servicio .dato-servicio h2 {
+  color: #4f6f8e;
+  padding-top: 25px;
+}
+
+.servicio .dato-servicio p {
+  padding: 25px 70px;
+  font-size: 16px;
+}
+
+.servicio .dato-servicio a {
+  text-decoration: none;
+  color: #4f6f8e;
+}
+
+.servicio .dato-servicio a:hover {
+  text-decoration: underline;
+}
+
+
+
